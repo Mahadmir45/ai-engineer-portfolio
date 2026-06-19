@@ -1,0 +1,216 @@
+:root {
+  --bg: #0b1020;
+  --card: rgba(255, 255, 255, 0.05);
+  --text: #e9eefb;
+  --muted: #a9b5d4;
+  --accent: #59e1c2;
+  --finance: #7eb6ff;
+  --nutrition: #59e1c2;
+  --border: rgba(255, 255, 255, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #152041, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.stats {
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+}
+
+.suggestion {
+  background: rgba(112, 165, 255, 0.12);
+  border: 1px solid rgba(112, 165, 255, 0.3);
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background: rgba(112, 165, 255, 0.22);
+}
+
+.chat {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem 0 1rem;
+  min-height: 300px;
+}
+
+.message {
+  max-width: 92%;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  line-height: 1.55;
+  font-size: 0.92rem;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #4b8dff, #58c8f7);
+  color: #fff;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.message-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.badge.finance {
+  background: rgba(126, 182, 255, 0.2);
+  color: var(--finance);
+}
+
+.badge.nutrition {
+  background: rgba(89, 225, 194, 0.15);
+  color: var(--nutrition);
+}
+
+.badge.both {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+}
+
+.citations {
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.citations summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.citation-item {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.citation-item strong {
+  color: var(--text);
+}
+
+.input-bar {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.input-bar input {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.input-bar input:focus {
+  border-color: rgba(112, 165, 255, 0.5);
+}
+
+.input-bar button {
+  background: linear-gradient(135deg, #4b8dff, #58c8f7);
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.25rem;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.input-bar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.typing {
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .message {
+    max-width: 100%;
+  }
+}

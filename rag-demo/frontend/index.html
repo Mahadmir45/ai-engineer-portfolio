@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hybrid Knowledge Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div>
+        <h1>Hybrid Knowledge Agent</h1>
+        <p class="subtitle">RAG over QuantFin financial ML + Food Search nutrition pipelines</p>
+      </div>
+      <div class="stats" id="corpus-stats">Loading corpus...</div>
+    </header>
+
+    <section class="suggestions" id="suggestions">
+      <button type="button" class="suggestion" data-q="Explain your Bayesian MMM architecture">Explain Bayesian MMM</button>
+      <button type="button" class="suggestion" data-q="How does food entity matching work?">Food entity matching</button>
+      <button type="button" class="suggestion" data-q="How does the spectral graph engine work?">Spectral graph engine</button>
+      <button type="button" class="suggestion" data-q="Describe the hybrid RAG routing system">Hybrid RAG routing</button>
+    </section>
+
+    <main class="chat" id="chat-log"></main>
+
+    <form class="input-bar" id="chat-form">
+      <input type="text" id="chat-input" placeholder="Ask about QuantFin, food search, or any portfolio project..." autocomplete="off">
+      <button type="submit" id="send-btn">Send</button>
+    </form>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

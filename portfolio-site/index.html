@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahad | AI Engineer Portfolio</title>
+  <meta name="description" content="AI Engineer portfolio — RAG systems, probabilistic ML, multi-source data synthesis. Built for retrieval-augmented generation and applied machine learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="background-glow"></div>
+  <header class="hero">
+    <nav class="nav container">
+      <span class="brand">Mahad · AI Engineer</span>
+      <div class="nav-links">
+        <a class="button ghost" href="#projects">Projects</a>
+        <a class="button ghost" href="#rag-demo">RAG Demo</a>
+        <a class="button ghost" href="#contact">Contact</a>
+      </div>
+    </nav>
+    <section class="hero-content container">
+      <p class="eyebrow">RAG · LLM · PyMC · FastAPI · Graph ML</p>
+      <h1>Building retrieval systems and applied ML that turn messy data into actionable intelligence.</h1>
+      <p class="subtitle">
+        AI Engineer specializing in hybrid RAG pipelines, probabilistic modeling, and multi-source data synthesis —
+        the same retrieve → reason → synthesize pattern used in production AI market intelligence platforms.
+      </p>
+      <div class="hero-cta">
+        <a class="button" href="#rag-demo">Try the RAG Demo</a>
+        <a class="button ghost" href="#projects">View Projects</a>
+        <a class="button ghost" href="https://github.com/Mahadmir45" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+      <div class="stats-grid" id="stats-grid"></div>
+    </section>
+  </header>
+
+  <main>
+    <section id="architecture" class="section container">
+      <div class="section-header">
+        <h2>RAG Architecture</h2>
+        <p>Hybrid retrieval pipeline — domain routing, BM25 + dense fusion, grounded synthesis.</p>
+      </div>
+      <div class="arch-flow" id="arch-flow"></div>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Applied ML, retrieval systems, and data pipelines — click "Ask Agent" to query the RAG demo.</p>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+
+    <section id="visualizations" class="section container">
+      <div class="section-header">
+        <h2>Technical Depth</h2>
+        <p>Project complexity and skill coverage across AI/ML engineering domains.</p>
+      </div>
+      <div class="viz-grid">
+        <article class="panel">
+          <h3>Project Complexity Score</h3>
+          <svg id="complexity-chart" viewBox="0 0 800 360" aria-label="Bar chart of project complexity"></svg>
+        </article>
+        <article class="panel">
+          <h3>AI/ML Skill Radar</h3>
+          <canvas id="skill-canvas" width="400" height="400" aria-label="Radar chart for AI/ML skills"></canvas>
+        </article>
+      </div>
+    </section>
+
+    <section id="rag-demo" class="section container">
+      <div class="section-header">
+        <h2>Hybrid Knowledge Agent</h2>
+        <p>Live RAG demo — ask about QuantFin financial ML or Food Search nutrition pipelines. Answers are grounded with citations.</p>
+      </div>
+      <div class="rag-embed-panel panel">
+        <div class="rag-fallback" id="rag-fallback">
+          <p>The RAG demo runs as a separate service. Start it locally or use the deployed instance:</p>
+          <code>cd rag-demo && uvicorn backend.main:app --port 8080</code>
+          <a class="button" id="rag-open-btn" href="http://127.0.0.1:8080" target="_blank" rel="noreferrer">Open RAG Demo</a>
+        </div>
+        <iframe id="rag-iframe" class="rag-iframe" title="Hybrid RAG Demo" src="" loading="lazy"></iframe>
+      </div>
+      <div class="suggested-prompts" id="suggested-prompts"></div>
+    </section>
+
+    <section class="section container">
+      <div class="section-header">
+        <h2>Specializations</h2>
+      </div>
+      <div class="tag-cloud" id="tag-cloud"></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Let's build intelligent systems together.</h3>
+        <p>Available for AI Engineer (RAG/LLM), Applied ML, and Data Engineering roles.</p>
+      </div>
+      <div class="footer-links">
+        <a class="button" href="https://github.com/Mahadmir45/ai-engineer-portfolio" target="_blank" rel="noreferrer">View Source</a>
+        <a class="button ghost" href="https://github.com/Mahadmir45" target="_blank" rel="noreferrer">GitHub Profile</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

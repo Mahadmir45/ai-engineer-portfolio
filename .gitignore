@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# RAG indexes (rebuilt via ingestion)
+rag-demo/data/chroma/
+rag-demo/data/bm25/
+rag-demo/data/*.pkl
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

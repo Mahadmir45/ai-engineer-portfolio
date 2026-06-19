@@ -1,0 +1,20 @@
+services:
+  rag-demo:
+    type: web
+    name: hybrid-knowledge-agent
+    runtime: python
+    rootDir: rag-demo
+    buildCommand: pip install -r requirements.txt && python ingestion/build_index.py
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+      - key: LLM_PROVIDER
+        value: openai
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: CORS_ORIGIN
+        value: https://mahadmir45.github.io
+      - key: OPENAI_API_KEY
+        sync: false
+    healthCheckPath: /api/health
